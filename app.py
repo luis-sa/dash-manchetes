@@ -6,13 +6,6 @@ import data as dt
 import scrapping_manchetes as manchetes
 
 
-df_1 = pd.DataFrame(data = pd.read_excel(r'C:\Users\luiss\PycharmProjects\dash_manchetes\manchetes.xlsx',
-                     sheet_name='manchetes {0}'.format(dt.data_pesquisa)), columns=['Manchetes', 'Palavra_Chave',
-                                                                                    'DataPesquisa', 'Fonte', 'Link_Consulta'])
-df_1 = df_1.drop(columns=['Palavra_Chave', 'DataPesquisa'])
-
-
-
 def generate_table(dataframe, max_rows = 50):
     return html.Table([
         html.Thead(
