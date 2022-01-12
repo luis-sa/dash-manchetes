@@ -15,7 +15,7 @@ def generate_table(dataframe, max_rows = 50):
                 html.Tr([
                 html.Td(dataframe.iloc[i][col]) for col in dataframe.columns
                 ])for i in range(min(len(dataframe), max_rows))
-            ])
+            ]),
         ])
 
 
@@ -26,12 +26,12 @@ app.layout = html.Div(
     children=[
         html.Div(
             children=[html.H1(
-                children='Manchetes do dia', style={'textAlign': 'center', 'fontSize': '200%'}
+                children='Manchetes do dia', style={'textAlign': 'center', 'fontSize': '200%', 'font-family': 'calibri'}
             )]
         ),
         html.Div(
-            generate_table(manchetes.gerar_consulta())
-        )
+            html.H2(generate_table(manchetes.gerar_consulta())
+        ), style={'font-family': 'calibri'})
     ]
 )
 
