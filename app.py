@@ -6,7 +6,7 @@ import data as dt
 import dash_bootstrap_components as dbc
 
 
-df_1 = pd.DataFrame(data = pd.read_excel(r'G:\Meu Drive\Análises Twitter\manchetes.xlsx',
+df_1 = pd.DataFrame(data = pd.read_excel(r'"C:\Users\luiss\PycharmProjects\dash_manchetes\manchetes.xlsx"',
                      sheet_name='manchetes {0}'.format(dt.data_pesquisa)), columns=['Manchetes', 'Palavra_Chave',
                                                                                     'DataPesquisa', 'Fonte', 'Link_Consulta'])
 df_1 = df_1.drop(columns=['Palavra_Chave', 'DataPesquisa'])
