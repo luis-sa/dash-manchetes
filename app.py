@@ -20,6 +20,7 @@ def generate_table(dataframe, max_rows = 50):
 
 
 app = dash.Dash(__name__)
+server = app.server
 
 app.layout = html.Div(
     children=[
