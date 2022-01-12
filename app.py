@@ -3,10 +3,10 @@ import dash_core_components as dcc
 import dash_html_components as html
 import pandas as pd
 import data as dt
-import dash_bootstrap_components as dbc
+import scrapping_manchetes as manchetes
 
 
-df_1 = pd.DataFrame(data = pd.read_excel(r'"C:\Users\luiss\PycharmProjects\dash_manchetes\manchetes.xlsx"',
+df_1 = pd.DataFrame(data = pd.read_excel(r'C:\Users\luiss\PycharmProjects\dash_manchetes\manchetes.xlsx',
                      sheet_name='manchetes {0}'.format(dt.data_pesquisa)), columns=['Manchetes', 'Palavra_Chave',
                                                                                     'DataPesquisa', 'Fonte', 'Link_Consulta'])
 df_1 = df_1.drop(columns=['Palavra_Chave', 'DataPesquisa'])
@@ -36,7 +36,7 @@ app.layout = html.Div(
             )]
         ),
         html.Div(
-            generate_table(df_1)
+            generate_table(manchetes.gerar_consulta())
         )
     ]
 )
