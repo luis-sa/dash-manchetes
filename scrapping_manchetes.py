@@ -12,10 +12,12 @@ sites_pesquisa = ['https://g1.globo.com/', 'https://www.metropoles.com/', 'https
                   'https://www.nytimes.com/', 'https://brasil.elpais.com/', 'https://www.estadao.com.br/',
                   'https://www.washingtonpost.com/']
 
+termos_pesquisa = ['Bolsonaro', 'Doria', 'Moro', 'Ciro']
+
 
 def pesquisa_sites(url):
 
-    palavras_consulta = lista_pesquisa = ['Bolsonaro', 'Mendonça', 'CPI do COVID']
+    palavras_consulta = termos_pesquisa
     resultado_consultas = []
 
     html = requests.get(url).content
